@@ -52,13 +52,6 @@ export default function Dashboard() {
   }
 
 
-  // Sorting filter
-  if (sortOrder === "high") {
-    processedData.sort((a, b) => b[overallKey] - a[overallKey]);
-  }
-  if (sortOrder === "low") {
-    processedData.sort((a, b) => a[overallKey] - b[overallKey]);
-  }
 
 
 
@@ -81,6 +74,16 @@ export default function Dashboard() {
     girlsKey = "secondary_drop_out_rate___girls"
     overallKey = "secondary_drop_out_rate___overall"
   }
+
+
+  // Sorting filter
+  if (sortOrder === "high") {
+    processedData.sort((a, b) => b[overallKey] - a[overallKey]);
+  }
+  if (sortOrder === "low") {
+    processedData.sort((a, b) => a[overallKey] - b[overallKey]);
+  }
+
 
   if (loading) return <h2>Loading UDISE data...</h2>
 
