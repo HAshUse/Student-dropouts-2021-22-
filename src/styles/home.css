@@ -1,0 +1,142 @@
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f8fafc;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.dashboard-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.explore-btn {
+    background-color: transparent;
+    color: #2563eb;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #2563eb;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.snapshot {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.snapshot h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.snapshot-subtitle {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 3rem;
+}
+
+.snapshot-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.snapshot-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.snapshot-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.snapshot-card strong {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.snapshot-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.snapshot-card.boys strong {
+    color: #2563eb;
+}
+
+.snapshot-card.girls strong {
+    color: #dc2626;
+}
+
+.why-section {
+    padding: 4rem 2rem;
+    background-color: #f8fafc;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.why-section p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.snapshot-card.gap {
+    border: 1px dashed #e5e7eb;
+}

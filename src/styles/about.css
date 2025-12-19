@@ -1,0 +1,74 @@
+/* =========================
+   ABOUT PAGE
+   ========================= */
+
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  background-color: #ffffff;
+}
+
+/* Section spacing */
+.about section {
+  margin-bottom: 2.5rem;
+}
+
+/* Headings */
+.about h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.8rem;
+}
+
+.about h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.6rem;
+}
+
+/* Paragraphs */
+.about p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+/* List */
+.about ul {
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.about li {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.4rem;
+}
+
+/* Subtle divider (optional) */
+.about section:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .about h1 {
+    font-size: 2rem;
+  }
+}
