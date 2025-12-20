@@ -13,17 +13,11 @@ export default function Home() {
 
     const navigate = useNavigate()
 
-    console.log("home data length", data?.length)
-    console.log("selected value", level);
-    console.log("API data sample:", data?.[0]);
-    console.log("Snapshot result:", snapshot);
-
-
     return (
         <>
             <section className='hero'>
                 <div className='hero-container'>
-                    <h1>Visualizing Student Dropout Rates Across Indian States</h1>
+                    <h1 className="gradient-heading">Visualizing Student Dropout Rates Across Indian States</h1>
                     <p>
                         Explore state-wise student dropout rates across India,
                         comparing boys and girls at different education levels using official UDISE data.
@@ -31,11 +25,11 @@ export default function Home() {
                 </div>
                 <div className='hero-actions'>
                     <button onClick={() => navigate("/dashboard")} className='dashboard-btn'>View Dashboard</button>
-                    <button className='explore-btn' onClick={() => navigate('/about')}>Explore Data</button>
+                    <button className='explore-btn' onClick={() => navigate('/about')}>Explore More</button>
                 </div>
             </section>
             <section className="snapshot" id='national-snapshot'>
-                <h2>National Snapshot</h2>
+                <h1 className="gradient-heading">National Snapshot</h1>
                 <p className="snapshot-subtitle">
                     A high-level overview of student dropout rates across India
                 </p>
@@ -71,7 +65,7 @@ export default function Home() {
             </section>
 
             <section className="why-section">
-                <h2>Why This Data Matters</h2>
+                <h2 className="gradient-heading">Why This Data Matters</h2>
                 <p>
                     Student dropout rates reflect deeper challenges such as access to education,
                     economic conditions, and social inequality.

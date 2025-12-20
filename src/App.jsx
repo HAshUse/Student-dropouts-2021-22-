@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { DashboardProvider } from "./Context/DashboardContext"
+import { DashboardProvider } from "./context/DashboardContext"
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
 import Home from './components/Home'
 import Footer from './components/footer'
 import About from "./components/About";
+import './App.css'
 
 const router = createBrowserRouter([
   {
@@ -33,9 +34,11 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <DashboardProvider>
-      <RouterProvider router={router} />;
-    </DashboardProvider>
+    <>
+      <DashboardProvider>
+        <RouterProvider router={router} />;
+      </DashboardProvider>
+    </>
 
   )
 }

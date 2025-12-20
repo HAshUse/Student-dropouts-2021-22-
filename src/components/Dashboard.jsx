@@ -1,4 +1,4 @@
-import { useDashboard } from '../Context/DashboardContext';
+import { useDashboard } from '../context/DashboardContext';
 import { useApiData } from "../hooks/useApiData";
 import useProcessedApiData from '../hooks/useProcessedApiData'
 import DropoutChart from "./DropoutChart";
@@ -92,7 +92,7 @@ export default function Dashboard() {
       <section className='dashboard-section insights'>
         <StatsCards data={processedData} overallKey={overallKey} level={level} />
       </section>
-      <h2>Filter By...</h2>
+      {/* <h2>Filter By...</h2> */}
       <section className='dashboard-section controls-section'>
         <div className="controls">
           <input

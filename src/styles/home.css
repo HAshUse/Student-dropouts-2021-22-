@@ -55,7 +55,7 @@
 
 .snapshot {
     padding: 4rem 2rem;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     text-align: center;
 }
 
@@ -139,4 +139,10 @@
 
 .snapshot-card.gap {
     border: 1px dashed #e5e7eb;
+}
+
+.gradient-heading {
+    background: linear-gradient(90deg, #1e3a8a, #4338ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
