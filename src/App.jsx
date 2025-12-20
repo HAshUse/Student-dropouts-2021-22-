@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { DashboardProvider } from "./context/DashboardContext"
 import Dashboard from "./components/Dashboard";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Nav";
 import Home from './components/Home'
 import Footer from './components/footer'
 import About from "./components/About";

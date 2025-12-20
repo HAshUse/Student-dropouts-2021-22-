@@ -10,7 +10,6 @@ import { toPng } from 'html-to-image';
 
 export default function Dashboard() {
 
-
   const {
     search,
     setSearch,
