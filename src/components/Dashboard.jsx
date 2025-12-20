@@ -1,4 +1,4 @@
-import { useDashboard } from '../context_temp/DashboardContext';
+import { useDashboard } from '../context/DashboardContext';
 import { useApiData } from "../hooks/useApiData";
 import useProcessedApiData from '../hooks/useProcessedApiData'
 import DropoutChart from "./DropoutChart";
