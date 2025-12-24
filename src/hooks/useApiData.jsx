@@ -21,7 +21,7 @@ export function useApiData() {
         }
 
         loadData();
-    }, []);
+    }, []); //fetches data on first render not on every re-render
 
     return { data, loading, error };
 }

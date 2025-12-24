@@ -31,7 +31,6 @@ export default function StatsCards({ data, overallKey, level }) {
           {level === "upper" && "Lowest Upper Primary Dropout"}
           {level === "secondary" && "Lowest Secondary Dropout"}
         </h3>
-
         <p>{lowest.state_ut}</p>
         <strong>{lowest[overallKey]}%</strong>
       </div>

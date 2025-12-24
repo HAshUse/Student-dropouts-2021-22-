@@ -1,5 +1,6 @@
 import { useDashboard } from '../context/DashboardContext';
 import { useApiData } from "../hooks/useApiData";
+import useDropoutKeys from "../hooks/useDropoutKeys";
 import useProcessedApiData from '../hooks/useProcessedApiData'
 import DropoutChart from "./DropoutChart";
 import StatsCards from "./StatsCards";
@@ -24,8 +25,7 @@ export default function Dashboard() {
   } = useDashboard()
 
   const { data, loading, error } = useApiData();
-
-  const chartRef = useRef(null);
+  const chartRef = useRef(null);  //stores mutable data or access dom elements without component re-renders
 
   const downloadChart = async () => {
     if (!chartRef.current) return;
@@ -46,25 +46,7 @@ export default function Dashboard() {
     }
   };
 
-  let boysKey, girlsKey, overallKey;
-
-  if (level === "primary") {
-    boysKey = "primary_drop_out_rate___boys_"
-    girlsKey = "primary_drop_out_rate___girls"
-    overallKey = "primary_drop_out_rate___overall"
-  }
-
-  if (level === "upper") {
-    boysKey = "upper_primary_drop_out_rate___boys"
-    girlsKey = "upper_primary_drop_out_rate___girls"
-    overallKey = "upper_primary_drop_out_rate___overall"
-  }
-
-  if (level === "secondary") {
-    boysKey = "secondary_drop_out_rate___boys_"
-    girlsKey = "secondary_drop_out_rate___girls"
-    overallKey = "secondary_drop_out_rate___overall"
-  }
+  const { boysKey, girlsKey, overallKey } = useDropoutKeys(level);
 
   const processedData = useProcessedApiData({ data, search, region, sortOrder, overallKey })
 

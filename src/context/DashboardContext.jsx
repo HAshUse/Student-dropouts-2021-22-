@@ -1,6 +1,6 @@
 import { useState,useContext,createContext } from "react";
 
-const DashboardContext = createContext();
+const DashboardContext = createContext();// creates a shared strage
 
 export function DashboardProvider({ children }) {
     const [search, setSearch] = useState("");
@@ -11,7 +11,7 @@ export function DashboardProvider({ children }) {
     
 
     return (
-        <DashboardContext.Provider
+        <DashboardContext.Provider      //store data into box
             value={{
                 search,
                 setSearch,
@@ -30,4 +30,4 @@ export function DashboardProvider({ children }) {
     );
 
 }
-export const useDashboard = () => useContext(DashboardContext);
+export const useDashboard = () => useContext(DashboardContext); //read data from the box

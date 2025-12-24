@@ -2,6 +2,7 @@ import { useMemo } from "react";
 
 export function useNationalSnapshot(data, level) {
 
+  //cache memory, re-render, expensive calculations
   return useMemo(() => {
     if (!data || data.length === 0) {
       return { overall: null, boys: null, girls: null };
@@ -27,26 +28,28 @@ export function useNationalSnapshot(data, level) {
       overallKey = "secondary_drop_out_rate___overall";
     }
 
-    // ✅ SAFE FILTER
+    //Filter out non-numeric data, NaN,undefined
     const valid = data.filter(d =>
       Number.isFinite(Number(d[boysKey])) &&
       Number.isFinite(Number(d[girlsKey])) &&
       Number.isFinite(Number(d[overallKey]))
     );
 
+    //if data is not available or zero we return null instead of crashing the site
     if (valid.length === 0) {
       console.warn("No valid snapshot data found");
       return { overall: null, boys: null, girls: null };
     }
 
+    // calculating the average of boys, girls, overall seperately
     const avg = key =>
       (
         valid.reduce((sum, d) => sum + Number(d[key]), 0) /
         valid.length
-      ).toFixed(1);
+      ).toFixed(1); //converts decimal to string and rounds to single decimal
 
-      const boysAvg = Number(avg(boysKey));
-      const girlsAvg = Number(avg(girlsKey));
+    const boysAvg = Number(avg(boysKey)); //converting to number again
+    const girlsAvg = Number(avg(girlsKey));
 
     return {
       overall: avg(overallKey),
@@ -54,5 +57,5 @@ export function useNationalSnapshot(data, level) {
       girls: avg(girlsKey),
       gap: (boysAvg - girlsAvg).toFixed(1)
     };
-  }, [data, level]);
+  }, [data, level]);    //dep arr, recalculate only when data or level changes
 }

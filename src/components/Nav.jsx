@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../App.css'
-import { useDashboard } from '../context/DashboardContext'
 
 export default function Navbar() {
-
-  const { level, setLevel } = useDashboard();
 
   return (
     <div>

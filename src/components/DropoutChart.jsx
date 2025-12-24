@@ -13,45 +13,44 @@ import {
 export default function DropoutChart({ data, boysKey, girlsKey, level }) {
   return (
     <div>
-      <ResponsiveContainer width="100%" height={420}>
+      <ResponsiveContainer width="100%" height={520}>
         <BarChart
           data={data}
-          margin={{ top: 20, right: 30, left: 10, bottom: 80 }}
+          margin={{ top: 20, right: 30, left: 25, bottom: 55 }}
         >
           {/* Grid for readability */}
           <CartesianGrid strokeDasharray="3 3" />
-
           <XAxis
             dataKey="state_ut"
-            tick={{ fontSize: 11 }}
-            // angle={-45}
-            // textAnchor="end"
-            // interval={2}
+            tick={{ fontSize: 10 }}
+            angle={-45}
+            textAnchor="end"
+          // interval={1}
           />
-
           <YAxis
             tickFormatter={(value) => `${value}%`}
           />
-
           {/* Tooltip with % */}
           <Tooltip
             formatter={(value) => `${value}%`}
           />
 
-          <Legend />
+          <Legend verticalAlign="bottom"
+            align="center"
+            wrapperStyle={{ paddingTop: 50 }} />
 
           <Bar
             dataKey={boysKey}
             fill="#3b82f6"
-            name={`${level} Boys`}
             radius={[6, 6, 0, 0]}
+            name={`${level} Boys`}
           />
 
           <Bar
             dataKey={girlsKey}
             fill="#dc2626"
-            name={`${level} Girls`}
             radius={[6, 6, 0, 0]}
+            name={`${level} Girls`}
           />
         </BarChart>
       </ResponsiveContainer>

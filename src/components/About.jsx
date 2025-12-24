@@ -40,7 +40,7 @@ export default function About() {
                 <p>The dataset used corresponds to the academic year 2021–22.</p>
             </section>
 
-            <section>
+            {/* <section>
                 <h3>Technologies Used</h3>
                 <ul>
                     <li>React (UI development)</li>
@@ -50,7 +50,7 @@ export default function About() {
                     <li>Axios (API requests)</li>
                     <li>html-to-image (download graph as .png)</li>
                 </ul>
-            </section>
+            </section> */}
 
             <section>
                 <h3>Project Scope</h3>

@@ -1,20 +1,14 @@
-/* =========================
-   ABOUT PAGE
-   ========================= */
-
 .about {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 3rem 1.5rem;
   background-color: #ffffff;
 }
 
-/* Section spacing */
 .about section {
   margin-bottom: 2.5rem;
 }
 
-/* Headings */
 .about h1 {
   font-size: 2.4rem;
   font-weight: 700;
